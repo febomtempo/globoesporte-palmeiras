@@ -1,0 +1,568 @@
+:root {
+  --bg-cima-padrao: rgb(243, 243, 243);
+  --bg-verde-palmeiras: rgb(23, 125, 73);
+  --bg-corpo-padrao: rgb(249, 249, 249);
+  --bg-verde-escuro: rgb(20, 106, 62);
+  --cor-g1: rgb(168, 0, 0);
+  --cor-ge: rgb(6, 170, 72);
+  --cor-gshow: rgb(255, 127, 0);
+  --cor-globo-videos: rgb(0, 92, 239);
+  --cor-titulos-cards: rgb(51, 51, 51);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('./assets/fonts/opensans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('./assets/fonts/metropolis/metropolis.regular.otf');
+}
+
+body {
+  background-color: var(--bg-corpo-padrao);
+  margin: 0px;
+  min-height: 100vh;
+  min-width: 300px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: fit-content(85%) 1fr;
+  grid-template-areas:
+    'cabecalho cabecalho'
+    'principal principal'
+    'rodape rodape';
+}
+
+header {
+  grid-area: cabecalho;
+  background-color: var(--bg-verde-palmeiras);
+  border-bottom: 0.1px solid #ccc;
+}
+header div {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.cabecalho-padrao {
+  padding-left: 0px;
+  background-color: var(--bg-cima-padrao);
+}
+
+.cabecalho-padrao span {
+  color: gray;
+  font-size: 10px;
+}
+
+#padrao-1 a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#padrao-1 a:hover:nth-child(3),
+#padrao-1 a:hover:nth-child(5),
+#padrao-1 a:hover:nth-child(7) {
+  text-decoration: overline;
+}
+
+#padrao-1 a:first-child,
+#padrao-1 a:last-child {
+  color: var(--cor-globo-videos);
+}
+
+#padrao-1 a:nth-child(3) {
+  color: var(--cor-g1);
+}
+
+#padrao-1 a:nth-child(5) {
+  color: var(--cor-ge);
+}
+
+#padrao-1 a:nth-child(7) {
+  color: var(--cor-gshow);
+}
+
+#padrao-1 a:hover:first-child {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+#padrao-2 a {
+  font-family: 'Metropolis', sans-serif;
+  text-decoration: none;
+  color: rgb(167, 167, 167);
+  font-size: 12px;
+  padding: 5px;
+}
+
+#padrao-2 a:last-child {
+  color: black;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #dfdfdf;
+  border-right-color: #666;
+  border-bottom-color: #666;
+  border-left-color: #858585;
+  border-radius: 4px;
+}
+
+#padrao-2 a:hover {
+  color: var(--cor-globo-videos);
+}
+#padrao-2 a:last-child:hover {
+  background-color: white;
+}
+
+.cabecalho-palmeiras nav {
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho-palmeiras a {
+  color: white;
+  text-decoration: none;
+  padding-right: 15px;
+}
+
+.cabecalho-palmeiras span {
+  color: white;
+}
+
+.cabecalho-palmeiras a:first-child {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cabecalho-palmeiras input:focus {
+  background-color: white;
+  width: 250px;
+  transition: 1s linear;
+  color: gray;
+}
+
+.cabecalho-palmeiras input:focus::placeholder {
+  color: gray;
+}
+
+.cabecalho-premiere {
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.cabecalho-premiere nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho-premiere nav span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho-premiere a {
+  color: olivedrab;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cabecalho-premiere p {
+  color: rgb(20, 20, 20);
+  font-size: 18px;
+}
+
+.cabecalho-premiere img {
+  margin-right: 40px;
+}
+
+#icone-menu {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  display: inline-block;
+}
+
+.icone-escudo {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  filter: brightness(0) invert(1);
+  margin-left: 15px;
+}
+
+.cabecalho-palmeiras a:nth-child(2) {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cabecalho-palmeiras a:nth-child(3) img {
+  width: 32px;
+  height: 32px;
+}
+
+.cabecalho-ultimas {
+  background-color: var(--bg-verde-palmeiras);
+}
+
+.cabecalho-ultimas a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 25px;
+  font-size: 20px;
+}
+
+#linha-cabecalho {
+  border: 0;
+  border-top: 0.1px solid gray;
+  opacity: 0.5;
+}
+
+nav input[type='search'] {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--bg-verde-escuro);
+  padding: 5px;
+}
+
+nav input[type='search']::placeholder {
+  color: white;
+  font-size: 14px;
+}
+
+nav input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
+
+nav input[type='search']:focus {
+  outline: none;
+}
+
+.cabecalho-ultimas a:last-child {
+  opacity: 0.4;
+}
+
+main {
+  grid-area: principal;
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#manchetes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 600px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#manchetes a {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  padding-left: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: start;
+  animation: zoom-out 0.2s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom-in {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 105% 105%;
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    background-size: 105% 105%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+#manchetes a:hover {
+  animation: zoom-in 0.2s linear;
+  animation-fill-mode: forwards;
+}
+
+#manchetes h1 {
+  font-size: 24px;
+  text-align: start;
+  margin-bottom: 0px;
+  margin-right: 50px;
+}
+
+#manchetes h2 {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+#img-principal {
+  background-image: url('./assets/imagens/palmeiras-mundial-51.jpg');
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+
+#img-principal h1 {
+  font-size: 32px;
+}
+
+#img-cima {
+  background-image: url('./assets/imagens/dudu.png');
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+#img-baixo {
+  background-image: url('./assets/imagens/abel-felipe.jpg');
+  grid-row: 2 / 3;
+  grid-column: 2/ 3;
+}
+
+.secundario {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: auto;
+}
+
+.secundario > img {
+  width: 100%;
+}
+
+.noticias {
+  padding-right: 20px;
+}
+
+.noticias > div {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.noticias-img {
+  height: 200px;
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.noticias-texto {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+}
+
+.noticias-texto a:hover {
+  color: var(--bg-verde-escuro);
+}
+
+.noticias a {
+  color: var(--bg-verde-palmeiras);
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.noticias h2 {
+  color: gray;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.noticias p {
+  color: gray;
+  font-size: 12px;
+}
+
+aside div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card {
+  border: 1px solid #e6e6e6;
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.card h3,
+.card-titulo {
+  text-align: start;
+  color: var(--cor-titulos-cards);
+  font-weight: bold;
+  margin: 0px;
+  padding-bottom: 5px;
+}
+
+.card a {
+  text-align: start;
+  color: var(--bg-verde-palmeiras);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-conteudo-mais {
+  font-size: 14px;
+}
+
+.card-conteudo:hover,
+.card-conteudo-mais:hover {
+  color: var(--bg-verde-escuro);
+}
+
+.slot {
+  width: 100%;
+  padding: 5px;
+}
+
+.slot-conteudo {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 70% 30%;
+  padding-top: 15px;
+}
+
+.slot-conteudo > img {
+  width: 100%;
+}
+
+.card-libertadores-titulo {
+  color: var(--bg-verde-palmeiras);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-libertadores-titulo:hover {
+  color: var(--bg-verde-escuro);
+}
+
+.tabela-libertadores {
+  width: 100%;
+  color: black;
+}
+
+.tabela-libertadores tr {
+  padding: 5px;
+}
+
+.tabela-libertadores thead tr {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 12% 12% 12% 12%;
+  text-align: left;
+}
+
+.tabela-libertadores tbody tr {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 10% 40% 12% 12% 12% 12%;
+  text-align: left;
+  border-top: 1px solid #eee;
+}
+
+.tabela-libertadores tbody tr td:nth-child(4),
+.tabela-libertadores tbody tr td:nth-child(5),
+.tabela-libertadores tbody tr td:nth-child(6) {
+  font-weight: bold;
+}
+
+.tabela-libertadores tr td {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.tabela-libertadores tr td img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+footer {
+  grid-area: rodape;
+  background-color: var(--bg-verde-palmeiras);
+}
+
+footer div {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer * {
+  color: white;
+  text-decoration: none;
+}
+
+footer img {
+  width: 32px;
+  height: 32px;
+}
+
+footer span {
+  padding: 5px;
+}
+
+.rodape {
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+.rodape a:first-child {
+  padding-right: 20px;
+}
+
+.rodape nav {
+  display: flex;
+  align-items: center;
+}
+
+.rodape a,
+.rodape span {
+  font-size: 14px;
+}
+
+.rodape-2 a,
+.rodape-2 p,
+.rodape-2 span {
+  font-size: 12px;
+}
+
+.rodape-2 nav {
+  display: flex;
+  align-items: center;
+}
+
+.rodape-2 {
+  padding-bottom: 0px;
+}
